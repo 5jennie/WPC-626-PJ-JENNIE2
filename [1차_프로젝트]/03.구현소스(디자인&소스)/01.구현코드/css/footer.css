@@ -1,0 +1,65 @@
+@charset "utf-8";
+/* 위고 출판사 메인 하단 페이지 CSS - footer.css */
+
+/* ***************************************************************** */
+/* 3. 하단영역 */
+/* Footer */
+.footer {
+  background: #000;
+  color: white;
+  padding: 45px 50px 50px 50px;
+}
+
+/* 회사소개, 약관, 개인정보 링크로 이동하기 */
+.footer-container {
+  max-width: 1920px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 80px;
+  padding-bottom: 20px;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* 위고 출판사 주소 및 대표자명, CS 관련 */
+.footer-content {
+  display: flex;
+}
+
+/* 회사 정보와 CS 정보 */
+.footer-info {
+  font-size: 14px;
+  color: #ccc;
+  line-height: 1.8;
+  flex: 1;
+}
+
+/* SNS 버튼 컨테이너 */
+.footer-social {
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.footer-sns {
+  display: flex;
+  gap: 10px;
+}
+/* SNS 버튼 */
+.sns-icon {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+}

@@ -1,0 +1,343 @@
+@charset "utf-8";
+/* ================================================================ */
+/* 위고 출판사 - 반응형 미디어 쿼리 (media.css) */
+/* ================================================================ */
+
+/* ***************************************************************** */
+/* 태블릿 사이즈 (max-width: 940px) */
+/* ***************************************************************** */
+
+@media (max-width: 940px) {
+  
+  /* ===== index.html (메인 페이지) ===== */
+  
+  /* 메인 배너 (Swiper) - 2개씩 표시 */
+  .swiper-slide.main-bn {
+    width: 50% !important; /* ★수정됨: calc(100% / 2) → 50% */
+    flex-shrink: 0 !important;
+  }
+  
+  /* Swiper 컨테이너 설정 */
+  .main-swiper .swiper-wrapper {
+    display: flex !important;
+  }
+  
+  .swiper-wrapper {
+    height: auto;
+    aspect-ratio: 1.2; /* ★수정됨: 비율 조정 */
+  }
+  
+  /* 이미지 크기 조정 */
+  .main-bn img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+  
+  /* 배너 정보 텍스트 크기 조정 */
+  .book-info {
+    font-size: 18px; /* ★수정됨: 20px → 18px */
+  }
+  
+  .book-info h3 {
+    margin-left: 20px; /* ★수정됨: 30px → 20px */
+    margin-bottom: 20px; /* ★수정됨: 30px → 20px */
+  }
+  
+  /* Swiper 네비게이션 버튼 위치 조정 */
+  .swiper-button-prev {
+    left: 15px; /* ★수정됨: 30px → 15px */
+  }
+  
+  .swiper-button-next {
+    right: 15px; /* ★수정됨: 30px → 15px */
+  }
+  
+  /* 화살표 크기 조정 */
+  .swiper-button-next:before,
+  .swiper-button-prev:before {
+    width: 10px; /* ★수정됨: 12px → 10px */
+    height: 10px; /* ★수정됨: 12px → 10px */
+    border-top: 2px solid #ffffff; /* ★수정됨: 3px → 2px */
+    border-right: 2px solid #ffffff; /* ★수정됨: 3px → 2px */
+  }
+  
+  /* Navigation Tabs - 간격 조정 */
+  .nav-tabs {
+    margin-top: 60px; /* ★수정됨: 100px → 60px */
+    margin-bottom: 40px; /* ★수정됨: 60px → 40px */
+    gap: 40px; /* ★수정됨: 60px → 40px */
+  }
+  
+  .nav-tabs a {
+    font-size: 18px; /* ★수정됨: 20px → 18px */
+    padding-bottom: 10px; /* ★수정됨: 12px → 10px */
+  }
+  
+  /* Book Section - 3개씩 표시 */
+  .book-section {
+    max-width: 100%; /* ★수정됨: 1720px → 100% */
+    padding: 0 30px; /* ★추가됨: 좌우 여백 */
+  }
+  
+  .book-row {
+    gap: 25px; /* ★수정됨: 40px → 25px */
+    margin-bottom: 50px; /* ★수정됨: 65px → 50px */
+  }
+  
+  /* 책 아이템 - 3개씩 배치 */
+  .book-item {
+    flex: 0 0 calc((100% - 50px) / 3); /* ★추가됨: 3개씩 */
+    max-width: calc((100% - 50px) / 3);
+  }
+  
+  /* 책 제목 폰트 크기 조정 */
+  .book-title h4 {
+    font-size: 16px; /* ★수정됨: 18px → 16px */
+  }
+  
+  .book-title p {
+    font-size: 16px; /* ★수정됨: 18px → 16px */
+  }
+  
+  
+  /* ===== all-books.html ===== */
+  
+  
+  
+  /* ===== detail-page.html ===== */
+  
+  
+  
+}
+
+/* ***************************************************************** */
+/* 모바일 사이즈 (max-width: 768px) */
+/* ***************************************************************** */
+
+@media (max-width: 768px) {
+  
+  /* ===== index.html (메인 페이지) ===== */
+  
+  /* 메인 배너 (Swiper) - 1개씩 표시 */
+  .swiper-slide.main-bn {
+    width: 100% !important; /* ★수정됨: 2개 → 1개 */
+    flex-shrink: 0 !important;
+  }
+  
+  /* Swiper 컨테이너 설정 */
+  .main-swiper .swiper-wrapper {
+    display: flex !important;
+  }
+  
+  .swiper-wrapper {
+    height: auto;
+    aspect-ratio: 0.8; /* ★수정됨: 세로형 비율 */
+  }
+  
+  /* 이미지 크기 조정 */
+  .main-bn img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+  
+  /* 배너 정보 텍스트 크기 조정 */
+  .book-info {
+    font-size: 16px; /* ★수정됨: 18px → 16px */
+  }
+  
+  .book-info h3 {
+    margin-left: 15px; /* ★수정됨: 20px → 15px */
+    margin-bottom: 15px; /* ★수정됨: 20px → 15px */
+  }
+  
+  /* Swiper 네비게이션 버튼 위치 조정 */
+  .swiper-button-prev {
+    left: 10px; /* ★수정됨: 15px → 10px */
+  }
+  
+  .swiper-button-next {
+    right: 10px; /* ★수정됨: 15px → 10px */
+  }
+  
+  /* 화살표 크기 조정 */
+  .swiper-button-next:before,
+  .swiper-button-prev:before {
+    width: 8px; /* ★수정됨: 10px → 8px */
+    height: 8px; /* ★수정됨: 10px → 8px */
+    border-top: 2px solid #ffffff;
+    border-right: 2px solid #ffffff;
+  }
+  
+  /* Navigation Tabs - 간격 조정 */
+  .nav-tabs {
+    margin-top: 40px; /* ★수정됨: 60px → 40px */
+    margin-bottom: 30px; /* ★수정됨: 40px → 30px */
+    gap: 30px; /* ★수정됨: 40px → 30px */
+  }
+  
+  .nav-tabs a {
+    font-size: 16px; /* ★수정됨: 18px → 16px */
+    padding-bottom: 8px; /* ★수정됨: 10px → 8px */
+  }
+  
+  /* 밑줄 크기 조정 */
+  .nav-tabs a.active::after {
+    bottom: 5px; /* ★수정됨: 7px → 5px */
+    width: calc(100% + 20px) !important; /* ★수정됨: 30px → 20px */
+  }
+  
+  @keyframes slideIn {
+    from {
+      width: 0;
+    }
+    to {
+      width: calc(100% + 20px); /* ★수정됨: 30px → 20px */
+    }
+  }
+  
+  /* Book Section - 2개씩 표시 */
+  .book-section {
+    padding: 0 20px; /* ★수정됨: 30px → 20px */
+  }
+  
+  .book-row {
+    gap: 15px; /* ★수정됨: 25px → 15px */
+    margin-bottom: 40px; /* ★수정됨: 50px → 40px */
+  }
+  
+  /* 책 아이템 - 2개씩 배치 */
+  .book-item {
+    flex: 0 0 calc((100% - 15px) / 2); /* ★수정됨: 3개 → 2개 */
+    max-width: calc((100% - 15px) / 2);
+  }
+  
+  /* 책 제목 폰트 크기 조정 */
+  .book-title h4 {
+    font-size: 14px; /* ★수정됨: 16px → 14px */
+  }
+  
+  .book-title p {
+    font-size: 14px; /* ★수정됨: 16px → 14px */
+    margin-top: 5px; /* ★수정됨: 10px → 5px */
+  }
+  
+  /* 책 제목 패딩 조정 */
+  .book-title {
+    padding: 15px; /* ★수정됨: 20px → 15px */
+  }
+  
+  
+/* ***************************************************************** */
+/* 모바일 2 (소형) - 아이폰14 등 (max-width: 430px) */
+/* ***************************************************************** */
+
+@media (max-width: 430px) {
+  
+  /* ===== index.html (메인 페이지) ===== */
+  
+  /* 메인 배너 (Swiper) - 세로 비율 더 길게 */
+  .swiper-wrapper {
+    height: auto;
+    aspect-ratio: 0.65; /* ★수정됨: 0.8 → 0.65 (더 세로로 길게) */
+  }
+  
+  /* 배너 정보 텍스트 크기 조정 */
+  .book-info {
+    font-size: 14px; /* ★수정됨: 16px → 14px */
+  }
+  
+  .book-info h3 {
+    margin-left: 12px; /* ★수정됨: 15px → 12px */
+    margin-bottom: 12px; /* ★수정됨: 15px → 12px */
+  }
+  
+  /* Swiper 네비게이션 버튼 위치 조정 */
+  .swiper-button-prev {
+    left: 8px; /* ★수정됨: 10px → 8px */
+  }
+  
+  .swiper-button-next {
+    right: 8px; /* ★수정됨: 10px → 8px */
+  }
+  
+  /* 화살표 크기 조정 */
+  .swiper-button-next:before,
+  .swiper-button-prev:before {
+    width: 7px; /* ★수정됨: 8px → 7px */
+    height: 7px; /* ★수정됨: 8px → 7px */
+    border-top: 1.5px solid #ffffff; /* ★수정됨: 2px → 1.5px */
+    border-right: 1.5px solid #ffffff; /* ★수정됨: 2px → 1.5px */
+  }
+  
+  /* Navigation Tabs - 간격 조정 */
+  .nav-tabs {
+    margin-top: 30px; /* ★수정됨: 40px → 30px */
+    margin-bottom: 20px; /* ★수정됨: 30px → 20px */
+    gap: 20px; /* ★수정됨: 30px → 20px */
+  }
+  
+  .nav-tabs a {
+    font-size: 14px; /* ★수정됨: 16px → 14px */
+    padding-bottom: 6px; /* ★수정됨: 8px → 6px */
+  }
+  
+  /* 밑줄 크기 조정 */
+  .nav-tabs a.active::after {
+    bottom: 4px; /* ★수정됨: 5px → 4px */
+    width: calc(100% + 15px) !important; /* ★수정됨: 20px → 15px */
+  }
+  
+  @keyframes slideIn {
+    from {
+      width: 0;
+    }
+    to {
+      width: calc(100% + 15px); /* ★수정됨: 20px → 15px */
+    }
+  }
+  
+  /* Book Section - 여백 조정 */
+  .book-section {
+    padding: 0 15px; /* ★수정됨: 20px → 15px */
+  }
+  
+  .book-row {
+    gap: 12px; /* ★수정됨: 15px → 12px */
+    margin-bottom: 30px; /* ★수정됨: 40px → 30px */
+  }
+  
+  /* 책 아이템 - 2개씩 유지하되 간격 조정 */
+  .book-item {
+    flex: 0 0 calc((100% - 12px) / 2); /* ★수정됨: 15px → 12px */
+    max-width: calc((100% - 12px) / 2);
+  }
+  
+  /* 책 제목 폰트 크기 조정 */
+  .book-title h4 {
+    font-size: 13px; /* ★수정됨: 14px → 13px */
+  }
+  
+  .book-title p {
+    font-size: 13px; /* ★수정됨: 14px → 13px */
+    margin-top: 4px; /* ★수정됨: 5px → 4px */
+  }
+  
+  /* 책 제목 패딩 조정 */
+  .book-title {
+    padding: 12px; /* ★수정됨: 15px → 12px */
+  }
+  
+  
+  /* ===== all-books.html ===== */
+  
+  
+  
+  /* ===== detail-page.html ===== */
+  
+  
+  
+}
+
+}

@@ -1,0 +1,335 @@
+@charset "utf-8";
+/* 위고 출판사 메인 페이지 CSS - main.css */
+
+/* 외부 CSS 불러오기 */
+@import url(./reset.css);
+@import url(./core.css);
+@import url(./grid_12_flex.css);
+
+/* 컴포넌트 CSS 불러오기 */
+@import url(./footer.css);
+@import url(./hero.css);
+
+/* 미디어쿼리 */
+@import url(./responsive.css);
+
+
+
+/* ***************************************************************** */
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* 2. 메인영역 */
+/* 메인 배너 전체 박스 */
+.main {
+  position: relative;
+  width: 100%;
+  flex: 1;
+  border-bottom: 2px solid;
+}
+
+/* 링크 스타일 초기화 */
+.main-bn,
+.slide-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* Swiper 컨테이너 */
+.main-swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-wrapper {
+  height: calc(100vh - 250px);
+  display: flex;
+  align-items: stretch;
+}
+@media (max-width: 1600px) {
+  .swiper-wrapper {
+    height: auto;
+    aspect-ratio: 1.5;
+  }
+}
+
+/* Swiper 슬라이드 - 3분의 1 크기 유지 */
+.swiper-slide.main-bn {
+  position: relative;
+  flex-shrink: 0;
+  width: calc(100% / 3);
+  height: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+/* Swiper 슬라이드 개수 조정 */
+/* 데스크톱: 3개 */
+.swiper-slide.main-bn { width: calc(100% / 3); }
+
+/* 태블릿: 2개 */
+@media (max-width: 940px) {
+  .swiper-slide.main-bn { width: calc(100% / 2) !important; }
+}
+
+/* 모바일: 1개 */
+@media (max-width: 768px) {
+  .swiper-slide.main-bn { width: 100% !important; }
+}
+
+/* 배너의 이미지 */
+.main-bn img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-bottom: solid 2px;
+}
+
+/* 메인배너 정보 박스 */
+.book-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  /* 플랙스 박스 - 하단 왼쪽 정렬  */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* 하단 정렬 */
+  align-items: flex-start; /* 왼쪽 정렬 */
+
+  /* 글자크기 */
+  font-size: 20px;
+}
+
+.book-info h3 {
+  /* 기본은 투명 */
+  color: #00000000;
+  margin-left: 30px;
+  margin-bottom: 30px;
+  transition: color 0.3s ease-out;
+}
+
+/* 메인배너 정보 박스 호버시 */
+.book-info:hover {
+  /* 그라데이션 */
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+}
+
+/* 호버시 텍스트 흰색으로 바뀌기 */
+.book-info:hover h3 {
+  color: rgb(255, 255, 255);
+}
+
+/* Swiper 네비게이션 버튼 커스텀 */
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  cursor: pointer;
+}
+
+/* 기본 화살표 제거 */
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  /* 기본 내용 제거 */
+  content: "";
+}
+
+/* 새로운 화살표 추가 */
+.swiper-button-next:before,
+.swiper-button-prev:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  border-top: 3px solid #ffffff;
+  border-right: 3px solid #ffffff;
+}
+
+/* 왼쪽 화살표 */
+.swiper-button-prev:before {
+  transform: translate(-30%, -50%) rotate(-135deg);
+}
+
+/* 오른쪽 화살표 */
+.swiper-button-next:before {
+  transform: translate(-70%, -50%) rotate(45deg);
+}
+
+/* 위치 */
+.swiper-button-prev {
+  left: 30px;
+}
+
+.swiper-button-next {
+  right: 30px;
+}
+
+/* ***************************************************************** */
+/* 2-1. Navigation Tabs */
+/* 배너 바로 밑에 있는 탭 버튼 3종 */
+
+/* 탭존 구역 */
+.nav-tabs {
+  margin-top: 100px;
+  margin-bottom: 60px;
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  text-decoration: none;
+}
+
+.nav-tabs a {
+  position: relative;
+  font-size: 20px;
+  color: #000000;
+  transition: all 0.4s ease;
+  display: inline-block;
+  padding-bottom: 12px;
+  text-decoration: none;
+}
+
+/* 탭 호버시 텍스트 컬러 바뀌기 */
+.nav-tabs a:hover {
+  color: #137cf4;
+}
+
+/* 활성화된 탭 스타일 */
+.nav-tabs a.active {
+  color: #137cf4;
+}
+
+/* 활성화된 탭 하단 밑줄 */
+.nav-tabs a.active::after {
+  content: "";
+  position: absolute;
+  bottom: 7px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% + 30px);
+  height: 2px;
+  background-color: #137cf4;
+  animation: slideIn 0.3s ease forwards;
+}
+
+/* 밑줄 애니메이션 */
+@keyframes slideIn {
+  from {
+    width: 0;
+  }
+  to {
+    width: calc(100% + 30px);
+  }
+}
+
+/* ***************************************************************** */
+/* 2-2. Book Section */
+/* 도서 세션 전체 설정 */
+/* 책 아이템 초기 상태 */
+.book-item {
+  position: relative;
+  display: flex;
+  text-align: center;
+  cursor: pointer;
+  overflow: hidden;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.book-section {
+  max-width: 1720px;
+  margin: auto;
+}
+
+/* 도서 세션 내용 */
+.book-row {
+  display: flex;
+  margin-bottom: 65px;
+  gap: 40px;
+}
+
+/* 도서 셋팅 */
+.book-item {
+  position: relative;
+  display: flex;
+  text-align: center;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+/* 도서 이미지 셋팅 */
+.book-cover {
+  position: relative;
+  left: 50%;
+  width: 100%;
+  object-fit: cover;
+  translate: -50%;
+  transition: 0.3s ease;
+}
+
+/* 도서명 노출 */
+.book-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  padding: 20px;
+  color: #ffffff;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s ease;
+  z-index: 10;
+  pointer-events: none; /* 클릭 방지 */
+  text-align: center;
+}
+
+/* 도서명 셋팅 - 책 제목 */
+.book-title h4 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* 도서명 셋팅 - 작가명 */
+.book-title p {
+  font-size: 18px;
+  margin-top: 10px;
+  opacity: 0.9;
+}
+
+/* 도서 세션 호버 효과 */
+.book-item:hover .book-cover {
+  transform: scale(1.02);
+  filter: brightness(50%);
+}
+
+/* 도서명 호버 효과 */
+.book-item:hover .book-title {
+  opacity: 1;
+}
+
+/* 책 그리드 개수 조정 */
+/* 데스크톱: 5개 (기본 flex) */
+
+/* 태블릿: 3개 */
+@media (max-width: 940px) {
+  .book-item { 
+    flex: 0 0 calc((100% - 50px) / 3);
+  }
+}
+
+/* 모바일: 2개 */
+@media (max-width: 768px) {
+  .book-item { 
+    flex: 0 0 calc((100% - 15px) / 2);
+  }
+}

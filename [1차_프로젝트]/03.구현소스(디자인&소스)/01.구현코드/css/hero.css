@@ -1,0 +1,167 @@
+@charset "utf-8";
+/* 위고 출판사 메인 상단 페이지 CSS - hero.css */
+
+/* ***************************************************************** */
+/* 1. 상단영역 */
+/* Header */
+
+.hero-section {
+  height: auto;
+  /* max-height: 1080px; */
+  /* min-height: 100vh; */
+  /* 최소 높이 보장 */
+  max-width: none;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.header {
+  background: white;
+  /* 헤더 높이 고정 */
+  /* height: 250px;  */
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s ease-out;
+}
+body{
+  padding-top: 252px;
+  transition: padding-top 0.5s ease;
+}
+
+body.on1{
+  padding-top: 198px;
+}
+body.on1 .logo img{
+  width: 80%;
+  margin-top: -10px;
+}
+
+body.on2{
+  padding-top: 144px;
+}
+body.on2 .logo img{
+  width: 60%;
+  margin-top: -20px;
+
+}
+
+body.on3{
+  padding-top: 90px;
+}
+body.on3 .logo img{
+  width: 40%;
+  margin-top: -30px;
+}
+
+/* 헤더안에 들어가는 컨텐츠 */
+.header-container {
+  border-bottom: solid 2px #000;
+  display: flex;
+  justify-content: space-between;
+
+  /* 수직 중앙 정렬 */
+  padding-top: 3vh;
+  width: 100%;
+  padding: 30px 0 0 0;
+  transition: padding 0.5s ease;
+}
+
+/* 전체 카테고리 옆으로 흐르게 */
+.nav-left ul,
+.nav-right ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+}
+
+/* 로고박스 카데고리 중앙에 로고 */
+.logo {
+  flex: 1;
+  text-align: center;
+}
+
+.logo img {
+  width: 100%;
+  transition: all 0.5s ease;
+}
+
+/* ****** 왼쪽 카테고리 구역 효과 ****** */
+/* 왼쪽 카테고리 구역 */
+.nav-left {
+  padding-left: 50px;
+  display: flex;
+  /* gap: 20px; */
+}
+
+/* 왼쪽 카테고리 텍스트 */
+.nav-left a {
+  font-size: 25px;
+  color: #000000;
+  transition: all 0.4s ease;
+}
+
+/* 왼쪽 호버시 텍스트 컬러 바뀌기 */
+.nav-left a:hover {
+  color: #137cf4;
+}
+
+/* ****************************** */
+
+/* ****** 오른쪽 카테고리 구역 효과 ****** */
+/* 오른쪽 카테고리 구역 */
+.nav-right {
+  height: 30px;
+  display: flex;
+  padding-right: 50px;
+}
+
+/* 오른쪽 카테고리 텍스트 */
+.nav-right a {
+  font-size: 25px;
+  color: #000000;
+  transition: all 0.4s ease;
+}
+
+/* 오른쪽 호버시 텍스트 컬러 바뀌기 */
+.nav-right a:hover {
+  color: #137cf4;
+}
+
+/* ****************************** */
+
+/* ****** 언어 설정 구역 효과 ****** */
+/* 언어 설정버튼 */
+/* KR, EN 버튼 */
+.lang-kr,
+.lang-en {
+  padding: 5px 15px;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+/* KR, EN 호버효과 */
+.lang-kr:hover,
+.lang-kr.active,
+.lang-en:hover,
+.lang-en.active {
+  background: #137cf4;
+  color: #fff;
+  border-color: #137cf4;
+}
+
+/* 언어 버튼 컨테이너 */
+.lang-buttons {
+  display: flex;
+  /* KR과 EN 사이만 좁은 간격 */
+  gap: 8px;
+}
+
+/* ****************************** */
