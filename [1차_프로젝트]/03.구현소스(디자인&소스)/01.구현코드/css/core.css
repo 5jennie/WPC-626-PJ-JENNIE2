@@ -38,6 +38,10 @@
   /* rem단위 계산편의를 위함 */
 /* } */
 
+html{
+  overflow-x: hidden;
+}
+
 /* 폰트 적용 */
 body {
     font-family: "Century_Gothic", sans-serif;

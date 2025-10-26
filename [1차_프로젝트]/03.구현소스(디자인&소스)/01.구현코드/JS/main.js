@@ -751,3 +751,132 @@ function updatePagination() {
     nextBtn.disabled = currentPage === totalPages;
   }
 }
+/* ***************************************************************** */
+/* ★추가됨: 탭 가로 스크롤 터치/드래그 기능 */
+/* ***************************************************************** */
+
+// 탭 메뉴 가로 스크롤 드래그 기능
+function initTabScrollDrag() {
+  const scrollContainer = document.querySelector(".category-tabs .wrap2");
+  
+  if (!scrollContainer) {
+    console.log("카테고리 탭 없음 - 메인 페이지");
+    return;
+  }
+
+  let isDown = false;
+  let startX;
+  let scrollLeft;
+  let velocity = 0;
+  let lastX = 0;
+  let timestamp = 0;
+
+  // ★추가됨: 마우스 드래그 시작 (PC)
+  scrollContainer.addEventListener("mousedown", (e) => {
+    isDown = true;
+    scrollContainer.style.cursor = "grabbing";
+    startX = e.pageX - scrollContainer.offsetLeft;
+    scrollLeft = scrollContainer.scrollLeft;
+    velocity = 0;
+    lastX = e.pageX;
+    timestamp = Date.now();
+  });
+
+  // ★추가됨: 마우스가 영역을 벗어나면 드래그 종료
+  scrollContainer.addEventListener("mouseleave", () => {
+    isDown = false;
+    scrollContainer.style.cursor = "grab";
+  });
+
+  // ★추가됨: 마우스 버튼을 놓으면 드래그 종료
+  scrollContainer.addEventListener("mouseup", () => {
+    isDown = false;
+    scrollContainer.style.cursor = "grab";
+    
+    // ★추가됨: 관성 스크롤 효과
+    if (Math.abs(velocity) > 1) {
+      let inertia = velocity;
+      const deceleration = 0.95; // 감속 계수
+      
+      const slide = () => {
+        if (Math.abs(inertia) > 0.5) {
+          scrollContainer.scrollLeft -= inertia;
+          inertia *= deceleration;
+          requestAnimationFrame(slide);
+        }
+      };
+      slide();
+    }
+  });
+
+  // ★추가됨: 마우스 이동 중 드래그 처리
+  scrollContainer.addEventListener("mousemove", (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    
+    const x = e.pageX - scrollContainer.offsetLeft;
+    const walk = (x - startX) * 1.5; // 스크롤 속도 (1.5배)
+    scrollContainer.scrollLeft = scrollLeft - walk;
+    
+    // 속도 계산
+    const now = Date.now();
+    const dt = now - timestamp;
+    if (dt > 0) {
+      velocity = (e.pageX - lastX) / dt * 10;
+    }
+    lastX = e.pageX;
+    timestamp = now;
+  });
+
+  // ★추가됨: 터치 드래그 시작 (모바일)
+  scrollContainer.addEventListener("touchstart", (e) => {
+    startX = e.touches[0].pageX - scrollContainer.offsetLeft;
+    scrollLeft = scrollContainer.scrollLeft;
+    velocity = 0;
+    lastX = e.touches[0].pageX;
+    timestamp = Date.now();
+  }, { passive: true });
+
+  // ★추가됨: 터치 이동 중 드래그 처리 (모바일)
+  scrollContainer.addEventListener("touchmove", (e) => {
+    const x = e.touches[0].pageX - scrollContainer.offsetLeft;
+    const walk = (x - startX) * 1.5; // 스크롤 속도
+    scrollContainer.scrollLeft = scrollLeft - walk;
+    
+    // 속도 계산
+    const now = Date.now();
+    const dt = now - timestamp;
+    if (dt > 0) {
+      velocity = (e.touches[0].pageX - lastX) / dt * 10;
+    }
+    lastX = e.touches[0].pageX;
+    timestamp = now;
+  }, { passive: true });
+
+  // ★추가됨: 터치 종료 시 관성 스크롤
+  scrollContainer.addEventListener("touchend", () => {
+    if (Math.abs(velocity) > 1) {
+      let inertia = velocity;
+      const deceleration = 0.95;
+      
+      const slide = () => {
+        if (Math.abs(inertia) > 0.5) {
+          scrollContainer.scrollLeft -= inertia;
+          inertia *= deceleration;
+          requestAnimationFrame(slide);
+        }
+      };
+      slide();
+    }
+  }, { passive: true });
+
+  // ★추가됨: 기본 커서 스타일
+  scrollContainer.style.cursor = "grab";
+  
+  console.log("✅ 탭 가로 스크롤 드래그 초기화 완료");
+}
+
+// ★추가됨: DOMContentLoaded 시 실행
+document.addEventListener("DOMContentLoaded", () => {
+  initTabScrollDrag();
+});

@@ -4,111 +4,251 @@
 /* ================================================================ */
 
 /* ***************************************************************** */
+/* PC 작은 사이즈 (max-width: 1400px) */
+/* ***************************************************************** */
+
+@media screen and (max-width: 1400px) {
+  /* 호버 텍스트 폰트 크기 줄이기 */
+  .book-title h4 {
+    font-size: 16px; /* 기존 18px */
+  }
+
+  .book-title p {
+    font-size: 13px; /* 기존 14px */
+  }
+
+  /* 텍스트 줄바꿈 강제 */
+  .book-title h4,
+  .book-title p {
+    word-break: keep-all;
+    overflow-wrap: break-word;
+    line-height: 1.4;
+  }
+}
+
+/* ***************************************************************** */
+/* PC 작은 사이즈 (max-width: 1300px) */
+/* ***************************************************************** */
+
+@media screen and (max-width: 1300px) {
+  /* 호버 텍스트 폰트 크기 줄이기 */
+  .book-title h4 {
+    font-size: 14px; /* 기존 18px */
+  }
+
+  .book-title p {
+    font-size: 11px; /* 기존 14px */
+  }
+
+  /* 텍스트 줄바꿈 강제 */
+  .book-title h4,
+  .book-title p {
+    word-break: keep-all;
+    overflow-wrap: break-word;
+    line-height: 1.4;
+  }
+}
+
+/* ***************************************************************** */
+/* PC 작은 사이즈 (max-width: 1200px) */
+/* ***************************************************************** */
+
+@media screen and (max-width: 1200px) {
+  /* 호버 텍스트 폰트 크기 줄이기 */
+  .book-title h4 {
+    font-size: 12px; /* 기존 18px */
+  }
+
+  .book-title p {
+    font-size: 9px; /* 기존 14px */
+  }
+
+  /* 텍스트 줄바꿈 강제 */
+  .book-title h4,
+  .book-title p {
+    word-break: keep-all;
+    overflow-wrap: break-word;
+    line-height: 1.4;
+  }
+}
+
+/* ***************************************************************** */
 /* 태블릿 사이즈 (max-width: 940px) */
 /* ***************************************************************** */
 
 @media (max-width: 940px) {
-  
+  /* ===== 공통 - 헤더 (Header) ===== */
+
+  /* 왼쪽 메뉴 패딩 */
+  .nav-left {
+    padding-left: 30px; /* 기존 50px */
+  }
+
+  /* 오른쪽 메뉴 패딩 */
+  .nav-right {
+    padding-right: 30px; /* 기존 50px */
+  }
+
+  /* 왼쪽 메뉴 폰트 크기 */
+  .nav-left a {
+    font-size: 20px; /* 기존 25px */
+  }
+
+  /* 메뉴 간격 조정 */
+  .nav-left ul,
+  .nav-right ul {
+    gap: 15px; /* 기존 20px */
+  }
+
+  /* 로고 크기 조정 */
+  .logo img {
+    max-width: 90%; /* 로고 크기 제한 */
+  }
+
+  /* 언어 버튼 크기 조정 */
+  .lang-kr,
+  .lang-en {
+    padding: 4px 12px; /* 기존 5px 15px */
+    font-size: 14px; /* 기존 16px */
+  }
+
+  /* 언어 버튼 간격 */
+  .lang-buttons {
+    gap: 6px; /* 기존 8px */
+  }
+
+  /* body 패딩 조정 */
+  body {
+    padding-top: 200px; /* 기존 252px */
+  }
+
+  body.on1 {
+    padding-top: 160px; /* 기존 198px */
+  }
+
+  body.on2 {
+    padding-top: 120px; /* 기존 144px */
+  }
+
+  body.on3 {
+    padding-top: 80px; /* 기존 90px */
+  }
+
   /* ===== index.html (메인 페이지) ===== */
-  
+
   /* 메인 배너 (Swiper) - 2개씩 표시 */
   .swiper-slide.main-bn {
-    width: 50% !important; /* ★수정됨: calc(100% / 2) → 50% */
+    width: 50% !important; /* calc(100% / 2) → 50% */
     flex-shrink: 0 !important;
   }
-  
+
   /* Swiper 컨테이너 설정 */
   .main-swiper .swiper-wrapper {
     display: flex !important;
   }
-  
+
   .swiper-wrapper {
     height: auto;
-    aspect-ratio: 1.2; /* ★수정됨: 비율 조정 */
+    aspect-ratio: 1.2; /* 비율 조정 */
   }
-  
+
   /* 이미지 크기 조정 */
   .main-bn img {
     width: 100% !important;
     height: 100% !important;
     object-fit: cover !important;
   }
-  
+
   /* 배너 정보 텍스트 크기 조정 */
   .book-info {
-    font-size: 18px; /* ★수정됨: 20px → 18px */
+    font-size: 18px; /* 기존 20px */
   }
-  
+
   .book-info h3 {
-    margin-left: 20px; /* ★수정됨: 30px → 20px */
-    margin-bottom: 20px; /* ★수정됨: 30px → 20px */
+    margin-left: 20px; /* 기존 30px */
+    margin-bottom: 20px; /* 기존 30px */
   }
-  
+
   /* Swiper 네비게이션 버튼 위치 조정 */
   .swiper-button-prev {
-    left: 15px; /* ★수정됨: 30px → 15px */
+    left: 15px; /* 기존 30px */
   }
-  
+
   .swiper-button-next {
-    right: 15px; /* ★수정됨: 30px → 15px */
+    right: 15px; /* 기존 30px */
   }
-  
+
   /* 화살표 크기 조정 */
   .swiper-button-next:before,
   .swiper-button-prev:before {
-    width: 10px; /* ★수정됨: 12px → 10px */
-    height: 10px; /* ★수정됨: 12px → 10px */
-    border-top: 2px solid #ffffff; /* ★수정됨: 3px → 2px */
-    border-right: 2px solid #ffffff; /* ★수정됨: 3px → 2px */
+    width: 10px; /* 기존 12px */
+    height: 10px; /* 기존 12px */
+    border-top: 2px solid #ffffff; /* 기존 3px */
+    border-right: 2px solid #ffffff; /* 기존 3px */
   }
-  
+
   /* Navigation Tabs - 간격 조정 */
   .nav-tabs {
-    margin-top: 60px; /* ★수정됨: 100px → 60px */
-    margin-bottom: 40px; /* ★수정됨: 60px → 40px */
-    gap: 40px; /* ★수정됨: 60px → 40px */
+    margin-top: 60px; /* 기존 100px */
+    margin-bottom: 40px; /* 기존 60px */
+    gap: 40px; /* 기존 60px */
   }
-  
+
   .nav-tabs a {
-    font-size: 18px; /* ★수정됨: 20px → 18px */
-    padding-bottom: 10px; /* ★수정됨: 12px → 10px */
+    font-size: 18px; /* 기존 20px */
+    padding-bottom: 10px; /* 기존 12px */
   }
-  
+
   /* Book Section - 3개씩 표시 */
   .book-section {
-    max-width: 100%; /* ★수정됨: 1720px → 100% */
-    padding: 0 30px; /* ★추가됨: 좌우 여백 */
+    max-width: 100%; /* 기존 1720px → 100% */
+    padding: 0 30px; /* 추가됨: 좌우 여백 */
   }
-  
+
   .book-row {
-    gap: 25px; /* ★수정됨: 40px → 25px */
-    margin-bottom: 50px; /* ★수정됨: 65px → 50px */
+    gap: 25px; /* 기존 40px */
+    margin-bottom: 50px; /* 기존 65px */
   }
-  
+
   /* 책 아이템 - 3개씩 배치 */
-  .book-item {
-    flex: 0 0 calc((100% - 50px) / 3); /* ★추가됨: 3개씩 */
+  .main-body .book-item {
+    flex: 0 0 calc((100% - 50px) / 3); /* 추가됨: 3개씩 */
     max-width: calc((100% - 50px) / 3);
   }
-  
+
   /* 책 제목 폰트 크기 조정 */
   .book-title h4 {
-    font-size: 16px; /* ★수정됨: 18px → 16px */
+    font-size: 16px; /* 기존 18px */
   }
-  
+
   .book-title p {
-    font-size: 16px; /* ★수정됨: 18px → 16px */
+    font-size: 16px; /* 기존 18px */
   }
-  
-  
+
   /* ===== all-books.html ===== */
-  
-  
-  
+
   /* ===== detail-page.html ===== */
-  
-  
-  
+
+  /* ===== info.html (회사 소개페이지) ===== */
+  .info-logo img {
+    margin-bottom: 90px;
+    margin-top: 90px;
+    width: 250px; /* 기존 300px */
+  }
+
+  .info-text h3 {
+    font-size: 22px; /* 기존 24px */
+    text-align: center;
+  }
+
+  .info-text p {
+    font-size: 16px; /* 기존 18px */
+    color: #535353;
+    line-height: 1.7;
+    margin-bottom: 100px;
+  }
+
+  /* ===== Footer ===== */
 }
 
 /* ***************************************************************** */
@@ -116,228 +256,307 @@
 /* ***************************************************************** */
 
 @media (max-width: 768px) {
-  
+  /* ===== 공통 - 헤더 (Header) ===== */
+
+  .header-container nav {
+    flex: 1;
+  }
+
+  /* 왼쪽 메뉴 패딩 */
+  .nav-left {
+    padding-left: 20px; /* 기존 30px */
+  }
+
+  /* 오른쪽 메뉴 패딩 */
+  .nav-right {
+    padding-right: 20px; /* 기존 30px */
+    justify-content: flex-end;
+  }
+
+  /* 왼쪽 메뉴 폰트 크기 */
+  .nav-left a {
+    font-size: 18px; /* 기존 20px */
+  }
+
+  /* 오른쪽 메뉴 폰트 크기 */
+  .nav-right a {
+    font-size: 18px; /* 기존 20px */
+  }
+
+  /* 메뉴 간격 조정 */
+  .nav-left ul,
+  .nav-right ul {
+    gap: 12px; /* 기존 15px */
+  }
+
+  /* 로고 크기 조정 */
+  .logo img {
+    max-width: 85%; /* 기존 90% */
+    width: 40% !important;
+  }
+
+  /* 언어 버튼 크기 조정 */
+  .lang-kr,
+  .lang-en {
+    display: none;
+  }
+
+  /* body 패딩 조정 */
+  body {
+    padding-top: 160px; /* 기존 200px */
+    padding-top: 70px !important;
+  }
+
+  body.on1 {
+    padding-top: 130px; /* 기존 160px */
+  }
+
+  body.on2 {
+    padding-top: 100px; /* 기존 120px */
+  }
+
+  body.on3 {
+    padding-top: 70px; /* 기존 80px */
+  }
+
   /* ===== index.html (메인 페이지) ===== */
-  
+
   /* 메인 배너 (Swiper) - 1개씩 표시 */
   .swiper-slide.main-bn {
-    width: 100% !important; /* ★수정됨: 2개 → 1개 */
+    width: 100% !important; /* 2개 → 1개 */
     flex-shrink: 0 !important;
   }
-  
+
   /* Swiper 컨테이너 설정 */
   .main-swiper .swiper-wrapper {
     display: flex !important;
   }
-  
+
   .swiper-wrapper {
     height: auto;
-    aspect-ratio: 0.8; /* ★수정됨: 세로형 비율 */
+    aspect-ratio: 0.8; /* 세로형 비율 */
   }
-  
+
   /* 이미지 크기 조정 */
   .main-bn img {
     width: 100% !important;
     height: 100% !important;
     object-fit: cover !important;
   }
-  
+
   /* 배너 정보 텍스트 크기 조정 */
   .book-info {
-    font-size: 16px; /* ★수정됨: 18px → 16px */
+    font-size: 16px; /* 기존 18px */
   }
-  
+
   .book-info h3 {
-    margin-left: 15px; /* ★수정됨: 20px → 15px */
-    margin-bottom: 15px; /* ★수정됨: 20px → 15px */
+    margin-left: 15px; /* 기존 20px */
+    margin-bottom: 15px; /* 기존 20px */
   }
-  
-  /* Swiper 네비게이션 버튼 위치 조정 */
-  .swiper-button-prev {
-    left: 10px; /* ★수정됨: 15px → 10px */
-  }
-  
+
+  /* Swiper 네비게이션 버튼 숨기기 */
+  .swiper-button-prev,
   .swiper-button-next {
-    right: 10px; /* ★수정됨: 15px → 10px */
+    display: none;
   }
-  
-  /* 화살표 크기 조정 */
-  .swiper-button-next:before,
-  .swiper-button-prev:before {
-    width: 8px; /* ★수정됨: 10px → 8px */
-    height: 8px; /* ★수정됨: 10px → 8px */
-    border-top: 2px solid #ffffff;
-    border-right: 2px solid #ffffff;
+
+  /* Book Section 전체 숨김 */
+  .book-section {
+    display: none;
   }
-  
-  /* Navigation Tabs - 간격 조정 */
+
   .nav-tabs {
-    margin-top: 40px; /* ★수정됨: 60px → 40px */
-    margin-bottom: 30px; /* ★수정됨: 40px → 30px */
-    gap: 30px; /* ★수정됨: 40px → 30px */
+    display: none;
   }
-  
-  .nav-tabs a {
-    font-size: 16px; /* ★수정됨: 18px → 16px */
-    padding-bottom: 8px; /* ★수정됨: 10px → 8px */
-  }
-  
-  /* 밑줄 크기 조정 */
-  .nav-tabs a.active::after {
-    bottom: 5px; /* ★수정됨: 7px → 5px */
-    width: calc(100% + 20px) !important; /* ★수정됨: 30px → 20px */
-  }
-  
+
   @keyframes slideIn {
     from {
       width: 0;
     }
     to {
-      width: calc(100% + 20px); /* ★수정됨: 30px → 20px */
+      width: calc(100% + 20px); /* 기존 30px */
     }
   }
-  
-  /* Book Section - 2개씩 표시 */
-  .book-section {
-    padding: 0 20px; /* ★수정됨: 30px → 20px */
+
+  /* ===== all-books.html ===== */
+
+  .category-tabs .wrap2 {
+    display: flex;
+    /* 줄바꿈 방지 - 한 줄로 유지 */
+    flex-wrap: nowrap;
+    /* 탭 간격 (화면 너비의 6%) */
+    gap: 6vw;
+    /* 가로 스크롤 허용 - 넘치는 탭은 스크롤로 */
+    overflow-x: auto;
+    /* 세로 스크롤 숨김 */
+    overflow-y: hidden;
+    /* 탭을 왼쪽부터 정렬 */
+    justify-content: flex-start;
+    /* 상하 15px, 좌우 20px 여백 */
+    padding: 15px 20px;
+    /* iOS Safari 부드러운 스크롤 효과 */
+    -webkit-overflow-scrolling: touch;
+    /* 스크롤바 숨기기 (Firefox) */
+    scrollbar-width: none;
+    /* 스크롤바 숨기기 (IE, Edge) */
+    -ms-overflow-style: none;
   }
-  
-  .book-row {
-    gap: 15px; /* ★수정됨: 25px → 15px */
-    margin-bottom: 40px; /* ★수정됨: 50px → 40px */
+
+  /* 
+   * 스크롤바 숨기기 (Chrome, Safari)
+   * - 스크롤바는 숨기되 스크롤 기능은 유지
+   * - 깔끔한 디자인을 위해 필요
+   */
+  .category-tabs .wrap2::-webkit-scrollbar {
+    display: none;
   }
-  
-  /* 책 아이템 - 2개씩 배치 */
-  .book-item {
-    flex: 0 0 calc((100% - 15px) / 2); /* ★수정됨: 3개 → 2개 */
-    max-width: calc((100% - 15px) / 2);
+
+  .category-tabs .wrap2 button {
+    flex-shrink: 0;
+    white-space: nowrap;
   }
-  
-  /* 책 제목 폰트 크기 조정 */
-  .book-title h4 {
-    font-size: 14px; /* ★수정됨: 16px → 14px */
+
+  .category-tabs .wrap1 {
+    display: none;
   }
-  
-  .book-title p {
-    font-size: 14px; /* ★수정됨: 16px → 14px */
-    margin-top: 5px; /* ★수정됨: 10px → 5px */
+  .category-tabs .wrap1 {
+    display: none;
   }
-  
-  /* 책 제목 패딩 조정 */
-  .book-title {
-    padding: 15px; /* ★수정됨: 20px → 15px */
+
+  .book-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
-  
-  
+
+  /* ===== detail-page.html ===== */
+
+  .book-detail-Info {
+    display: block;
+  }
+
+  .dp-book-cover {
+    position: static;
+    margin-top: 50px;
+  }
+
+  .right-section {
+    margin-top: 50px;
+  }
+
+  .tab-menu {
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  /* ===== Footer ===== */
+  .footer-links {
+    gap: 20px;
+  }
+  .footer-links a {
+    font-size: 15px;
+  }
+
+  .footer-content {
+    display: block;
+  }
+
+  .footer-info {
+    margin-top: 30px;
+  }
+
+  .footer .sns-icon {
+    display: block;
+    margin-top: 30px;
+  }
+}
+
 /* ***************************************************************** */
 /* 모바일 2 (소형) - 아이폰14 등 (max-width: 430px) */
 /* ***************************************************************** */
 
 @media (max-width: 430px) {
-  
   /* ===== index.html (메인 페이지) ===== */
-  
+
   /* 메인 배너 (Swiper) - 세로 비율 더 길게 */
   .swiper-wrapper {
     height: auto;
-    aspect-ratio: 0.65; /* ★수정됨: 0.8 → 0.65 (더 세로로 길게) */
+    aspect-ratio: 0.65; /* 기존 0.8 */
   }
-  
+
   /* 배너 정보 텍스트 크기 조정 */
   .book-info {
-    font-size: 14px; /* ★수정됨: 16px → 14px */
+    font-size: 14px; /* 기존 16px */
   }
-  
+
   .book-info h3 {
-    margin-left: 12px; /* ★수정됨: 15px → 12px */
-    margin-bottom: 12px; /* ★수정됨: 15px → 12px */
+    margin-left: 12px; /* 기존 15px */
+    margin-bottom: 12px; /* 기존 15px */
   }
-  
-  /* Swiper 네비게이션 버튼 위치 조정 */
-  .swiper-button-prev {
-    left: 8px; /* ★수정됨: 10px → 8px */
-  }
-  
+
+  /* Swiper 네비게이션 버튼 숨기기 */
+  .swiper-button-prev,
   .swiper-button-next {
-    right: 8px; /* ★수정됨: 10px → 8px */
+    display: none;
   }
-  
-  /* 화살표 크기 조정 */
-  .swiper-button-next:before,
-  .swiper-button-prev:before {
-    width: 7px; /* ★수정됨: 8px → 7px */
-    height: 7px; /* ★수정됨: 8px → 7px */
-    border-top: 1.5px solid #ffffff; /* ★수정됨: 2px → 1.5px */
-    border-right: 1.5px solid #ffffff; /* ★수정됨: 2px → 1.5px */
-  }
-  
-  /* Navigation Tabs - 간격 조정 */
+
   .nav-tabs {
-    margin-top: 30px; /* ★수정됨: 40px → 30px */
-    margin-bottom: 20px; /* ★수정됨: 30px → 20px */
-    gap: 20px; /* ★수정됨: 30px → 20px */
+    display: none;
   }
-  
-  .nav-tabs a {
-    font-size: 14px; /* ★수정됨: 16px → 14px */
-    padding-bottom: 6px; /* ★수정됨: 8px → 6px */
+
+  /* Book Section 전체 숨김 */
+  .book-section {
+    display: none;
   }
-  
-  /* 밑줄 크기 조정 */
-  .nav-tabs a.active::after {
-    bottom: 4px; /* ★수정됨: 5px → 4px */
-    width: calc(100% + 15px) !important; /* ★수정됨: 20px → 15px */
-  }
-  
+
   @keyframes slideIn {
     from {
       width: 0;
     }
     to {
-      width: calc(100% + 15px); /* ★수정됨: 20px → 15px */
+      width: calc(100% + 15px); /* 기존 20px */
     }
   }
-  
-  /* Book Section - 여백 조정 */
-  .book-section {
-    padding: 0 15px; /* ★수정됨: 20px → 15px */
-  }
-  
-  .book-row {
-    gap: 12px; /* ★수정됨: 15px → 12px */
-    margin-bottom: 30px; /* ★수정됨: 40px → 30px */
-  }
-  
-  /* 책 아이템 - 2개씩 유지하되 간격 조정 */
-  .book-item {
-    flex: 0 0 calc((100% - 12px) / 2); /* ★수정됨: 15px → 12px */
-    max-width: calc((100% - 12px) / 2);
-  }
-  
-  /* 책 제목 폰트 크기 조정 */
-  .book-title h4 {
-    font-size: 13px; /* ★수정됨: 14px → 13px */
-  }
-  
-  .book-title p {
-    font-size: 13px; /* ★수정됨: 14px → 13px */
-    margin-top: 4px; /* ★수정됨: 5px → 4px */
-  }
-  
-  /* 책 제목 패딩 조정 */
-  .book-title {
-    padding: 12px; /* ★수정됨: 15px → 12px */
-  }
-  
-  
-  /* ===== all-books.html ===== */
-  
-  
-  
-  /* ===== detail-page.html ===== */
-  
-  
-  
-}
 
+  /* ===== all-books.html ===== */
+
+  /* ===== detail-page.html ===== */
+
+  /* ===== info.html (회사 소개페이지) ===== */
+  .info-logo img {
+    margin-top: 100px;
+    margin-bottom: 60px;
+    width: 150px; /* 기존 300px */
+  }
+
+  .info-text h3 {
+    font-size: 22px; /* 기존 24px */
+    text-align: center;
+  }
+
+  .info-text p {
+    font-size: 14px; /* 기존 18px */
+    color: #535353;
+    line-height: 1.7;
+    margin-bottom: 100px;
+  }
+
+  /* ===== Footer ===== */
+  .footer-links {
+    gap: 20px;
+  }
+  .footer-links a {
+    font-size: 15px;
+  }
+
+  .footer-content {
+    display: block;
+  }
+
+  .footer-info {
+    margin-top: 30px;
+  }
+
+  .footer .sns-icon {
+    display: block;
+    margin-top: 30px;
+  }
 }

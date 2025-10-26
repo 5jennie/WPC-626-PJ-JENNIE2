@@ -1,4 +1,5 @@
-// 위고 출판사 detail-page JS - detail-page.js
+// 위고 출판사 detail-page js - detail-page.js
+
 
 /* ***************************************************************** */
 // 1:1 문의 페이지네이션 /* ★수정됨: qna- 클래스명으로 통일 */
@@ -246,7 +247,7 @@ window.addEventListener("load", function () {
   }, 0);
 });
 
-// 위고 출판사 detail-page JS - detail-page.js
+// 위고 출판사 detail-page js - detail-page.js
 
 /* ***************************************************************** */
 // URL에서 책 ID 가져오기 및 데이터 로드 */

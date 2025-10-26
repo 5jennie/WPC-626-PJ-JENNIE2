@@ -27,9 +27,18 @@ body {
 /* 카테고리 전체 설정 */
 .category-tabs {
   margin-bottom: 60px;
+   flex-wrap: wrap;
+}
+.category-tabs > * {
   display: flex;
-  justify-content: center;
   gap: 60px;
+  white-space: nowrap;
+}
+.category-tabs .wrap1{  
+  justify-content: center;
+}
+.category-tabs .wrap2{
+  display: none;  
 }
 
 /* 카데고리 개별 설정 */
